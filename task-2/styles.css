@@ -1,10 +1,10 @@
-*{
+* {
   padding: 0;
   margin: 0;
   box-sizing: border-box;
 }
 
-body{
+body {
   background-color: black;
   font-family: sans-serif;
   padding: 50px;
@@ -18,7 +18,7 @@ body{
   border-radius: 10px;
   display: flex;
   box-shadow: rgb(79, 79, 79) 10px 10px 10px;
-  justify-content: center ;
+  justify-content: center;
   gap: 10px;
 }
 
@@ -27,6 +27,7 @@ body{
   border-radius: 10px;
   object-fit: cover;
 }
+
 .card-content {
   display: flex;
   flex-direction: column;
@@ -45,8 +46,9 @@ body{
     flex-direction: column;
     align-items: center;
   }
+
   .card-image {
     width: 100%;
     height: 200px;
   }
-} 
+}
