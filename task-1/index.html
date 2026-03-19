@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Fresh farm grown apples available for purchase.">
+    <meta name="keywords" content="apples, fresh, farm, fruit, healthy">
+    <title>Document</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+            -webkit-scrollbar-width: none;
+            scrollbar-width: none;
+        }
+        body{
+            font-family:sans-serif;
+            background-color: #010f07;
+            height: 100vh;
+            transition:ease-in-out;
+        }
+        header{
+            color: #F2E3D5;
+            background-color: #282E1C;
+            padding: 20px;
+            position: sticky;
+            top: 0;
+            left: 0;
+            z-index: 999;
+            }
+        footer{
+            position: sticky;
+            text-align: center;
+            bottom: 0;
+            color: #F2E3D5;
+            background-color: #282E1C;
+            padding: 10px;
+            }
+        nav{
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        main{
+            text-align: center;
+            color: #F2E3D5;
+            height: 100%;
+            overflow: scroll;
+        }
+        ul{
+            list-style-type: none;
+            padding: 0;
+        }
+        li{
+            text-decoration: none;
+            display: inline;
+            margin: 0 15px;
+        }
+        a{
+            text-decoration: none;
+            color: white;
+        }
+        #hero{
+            background-image: url('ranch.jpg');
+            background-size: cover;
+            background-position: center;
+            height: 100vh;
+            text-align: center;
+            position: relative;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        #logo{
+           font-family: 'Times New Roman', Times, serif;
+           font-style: italic;
+        }
+        #hero::before{
+            content: "";
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            z-index: 0;
+            background-color: rgba(0, 0, 0, 0.8);
+        }
+        #hero::before:hover{
+            background-color: rgba(0, 0, 0, 0.5);
+            cursor: pointer;
+        }
+        .apple-type-img{
+            width: 250px;
+            height: 250px;
+            object-fit: cover;
+            border-radius: 50%;
+        }
+        #products ul{
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+            gap: 30px;
+        }
+        #products{
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            gap: 20px;
+            padding: 50px;
+            height: 100vh;
+        }
+        #contact{
+            padding: 50px;
+            background-color: #340202;
+            display: flex;
+            justify-content: center;
+            flex-direction: column;
+            gap: 10px;
+            height: 100vh;
+        }
+        @media screen and (max-width:1000px) {
+            .apple-type-img{
+                width: 150px;
+                height: 150px;
+            }
+        }
+        @media screen and (max-width:500px) {
+            .apple-type-img{
+                width: 100px;
+                height: 100px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+       <nav>
+        <h1 id="logo">APPLE RANCH🍎 </h1>
+        <ul>
+            <li><a href="#hero">Home</a></li>
+            <li><a href="#products">Products</a></li>
+            <li><a href="#contact">Contact</a></li>
+        </ul>
+       </nav>
+    </header>
+    <main>
+        <div id="hero">
+        <span style="position: relative;z-index:1;">
+            <h1>Fresh Apples for Sale</h1>
+            <p>Why think twice about quality when you can see our farm anytime?</p>
+        </span>
+        </div>
+        <div id="products">
+            <h1>Our Products</h1>
+            <ul>
+                <li>
+                    <img src="red-delicious.jpg" alt="Red Delicious Apples" class="apple-type-img"><br>
+                    Red Delicious Apples
+                </li>
+                <li>
+                    <img src="granny-smith.jpg" alt="Granny Smith Apples" class="apple-type-img"><br>
+                    Granny Smith Apples
+                </li>
+                <li>
+                    <img src="fuji.jpg" alt="Fuji Apples" class="apple-type-img"><br>
+                    Fuji Apples
+                </li>
+                <li>
+                    <img src="gala.jpg" alt="Gala Apples" class="apple-type-img"><br>
+                    Gala Apples
+                </li>
+                <li>
+                    <img src="honeycrisp.jpg" alt="Honeycrisp Apples" class="apple-type-img"><br>
+                    Honeycrisp Apples   
+                </li>
+            </ul>
+        </div>
+        <div id="contact">
+            <h2>Contact Us</h2>
+            <p>Email: info@appleranch.com</p>
+            <p>Phone: (123) 456-7890</p>
+            <p>Address: 123 Apple Lane, Orchard City, Country</p>
+
+        </div>
+    </main>
+    <footer>
+        <p>&copy; 2026 Apple Ranch. All rights reserved.</p>
+    </footer>
+</body>
+</html>
