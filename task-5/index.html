@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Task-5</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+    <button id="modal1-open" class="button" onclick="location.href='#modal1'">Open Modal using :target</button>
+    <label id="modal2-open" class="button" for="modal2-toggle">Open Modal using :checked</label>
+    <input type="checkbox" style="background-color: white;" id="modal2-toggle" hidden>
+    <div id="modal1">
+        <button class="button" id="close-btn" onclick="location.href='#'">X</button>
+        <div id="modal-content">
+            <h2>Modal :target method</h2>
+            <p>Have a great day!</p>
+        </div>
+    </div>
+    <div id="modal2">
+        <label class="button" id="close-btn" for="modal2-toggle">X</label>
+        <div id="modal-content">
+            <h2>Modal :checked method</h2>
+            <p>Have a great day!</p>
+        </div>
+    </div>
+</body>
+
+</html>
