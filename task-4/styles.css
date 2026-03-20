@@ -1,0 +1,128 @@
+* {
+    margin: 0;
+    padding: 0;
+    transition: all 0.3s ease;
+}
+
+body {
+    background-color: black;
+    font-family: sans-serif;
+}
+
+#nav {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+}
+
+ul {
+    display: flex;
+    list-style: none;
+}
+
+a {
+    text-decoration: none;
+    color: black;
+}
+
+header {
+    background-color: white;
+    padding: 30px;
+    display: flex;
+    justify-content: center;
+    gap: 50px;
+    align-items: center;
+}
+
+#products {
+    position: relative;
+}
+
+/* main menu */
+
+#main-menu {
+    gap: 150px;
+    justify-content: start;
+    display: flex;
+}
+
+#main-menu a:hover {
+    color: #676767;
+}
+
+/* sub menu */
+
+#products-menu {
+    background-color: white;
+    padding: 50px;
+    position: absolute;
+    display: none;
+    flex-direction: column;
+    border-radius: 20px;
+    gap: 50px;
+    left: 0;
+    top: 100%;
+    box-shadow: rgb(173, 173, 173) 0px 0px 20px;
+}
+
+#products:hover #products-menu {
+    display: flex;
+}
+
+/* nested sub menu  */
+
+#boots {
+    position: relative;
+}
+
+#boots-menu {
+    background-color: white;
+    padding: 20px;
+    position: absolute;
+    display: none;
+    flex-direction: column;
+    border-radius: 20px;
+    gap: 20px;
+    left: 50%;
+    top: 0;
+    box-shadow: rgb(173, 173, 173) 0px 0px 20px;
+}
+
+#boots:hover #boots-menu {
+    display: flex;
+    cursor: pointer;
+}
+
+/* responsive breakpoint handling */
+
+@media screen and (max-width:800px) {
+    header {
+        flex-direction: column;
+        gap: 20px;
+    }
+
+    #main-menu {
+        flex-direction: column;
+        gap: 20px;
+        width: 100%;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+    }
+
+    #products-menu {
+        position: static;
+        box-shadow: none;
+        padding: 20px;
+        width: 100%;
+        text-align: justify;
+        margin-left: 30%;
+    }
+
+    #boots-menu {
+        position: static;
+        box-shadow: none;
+        padding: 20px;
+    }
+}

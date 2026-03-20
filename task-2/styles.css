@@ -41,6 +41,8 @@ body {
   cursor: pointer;
 }
 
+/* responsive breakpoint handling   */
+
 @media screen and (max-width: 600px) {
   .card {
     flex-direction: column;
