@@ -10,6 +10,7 @@ body {
     background-color: #010f07;
     height: 100vh;
     transition: ease-in-out;
+    overflow: hidden;
 }
 
 header {
@@ -23,9 +24,11 @@ header {
 }
 
 footer {
-    position: sticky;
+    position: fixed;
     text-align: center;
     bottom: 0;
+    left: 0;
+    right: 0;
     color: #F2E3D5;
     background-color: #282E1C;
     padding: 10px;
@@ -40,8 +43,8 @@ nav {
 main {
     text-align: center;
     color: #F2E3D5;
-    height: 100%;
-    overflow: scroll;
+    height: calc(100vh - 120px);
+    position: relative;
 }
 
 ul {
@@ -60,14 +63,39 @@ a {
     color: white;
 }
 
+nav label {
+    cursor: pointer;
+    color: white;
+    transition: opacity 0.3s;
+}
+
+nav label:hover {
+    opacity: 0.7;
+}
+
+/* Hide all sections by default */
+.section {
+    display: none;
+    height: 100%;
+    width: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+ 
+/* Show sections based on radio button state */
+#home-radio:checked~main #hero,
+#products-radio:checked~main #products,
+#contact-radio:checked~main #contact {
+    display: flex;
+}
+
 #hero {
     background-image: url('assets/ranch.jpg');
     background-size: cover;
     background-position: center;
-    height: 100vh;
     text-align: center;
     position: relative;
-    display: flex;
     justify-content: center;
     align-items: center;
 }
@@ -88,9 +116,8 @@ a {
     background-color: rgba(0, 0, 0, 0.8);
 }
 
-#hero::before:hover {
+#hero:hover::before {
     background-color: rgba(0, 0, 0, 0.5);
-    cursor: pointer;
 }
 
 .apple-type-img {
@@ -108,23 +135,17 @@ a {
 }
 
 #products {
-    display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
     gap: 20px;
-    padding: 50px;
-    height: 100vh;
 }
 
 #contact {
-    padding: 50px;
     background-color: #340202;
-    display: flex;
     justify-content: center;
     flex-direction: column;
     gap: 10px;
-    height: 100vh;
 }
 
 /* responsive breakpoint handling */
@@ -143,7 +164,7 @@ a {
     }
 }
 
-@media screen and (max-width : 600px) {
+@media screen and (max-width: 600px) {
     nav {
         flex-direction: column;
     }
