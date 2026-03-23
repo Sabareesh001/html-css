@@ -82,7 +82,7 @@ nav label:hover {
     top: 0;
     left: 0;
 }
- 
+
 /* Show sections based on radio button state */
 #home-radio:checked~main #hero,
 #products-radio:checked~main #products,
